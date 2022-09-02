@@ -2,6 +2,7 @@ package readServers;
 
 
 
+import com.alibaba.fastjson.JSONObject;
 import org.apache.commons.io.FileUtils;
 
 import java.io.File;
@@ -12,7 +13,7 @@ public class readServers {
 
         File file=new File("mejson");
         String content= FileUtils.readFileToString(file,"UTF-8");
-        JSONObject jsonObject=new JSONObject(content);
+        JSONObject jsonObject= JSONObject.parseObject(content);
         System.out.println("姓名是："+jsonObject.getString("name"));
         System.out.println("年龄："+jsonObject.getDouble("age"));
         System.out.println("学到的技能："+jsonObject.getJSONArray("major"));
