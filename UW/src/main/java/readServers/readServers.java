@@ -2,22 +2,24 @@ package readServers;
 
 
 
+import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import org.apache.commons.io.FileUtils;
+import pojo.Server;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.List;
 
 public class readServers {
     public static void main(String args[]) throws IOException {
 
-        File file=new File("mejson");
+        File file=new File("servers.json");
         String content= FileUtils.readFileToString(file,"UTF-8");
-        JSONObject jsonObject= JSONObject.parseObject(content);
-        System.out.println("姓名是："+jsonObject.getString("name"));
-        System.out.println("年龄："+jsonObject.getDouble("age"));
-        System.out.println("学到的技能："+jsonObject.getJSONArray("major"));
-        System.out.println("国家："+jsonObject.getJSONObject("Nativeplace").getString("country"));
+        List<Server> servers = JSON.parseArray(content,Server.class);
+        System.out.println(servers.toString());
+
+
 
     }
 }

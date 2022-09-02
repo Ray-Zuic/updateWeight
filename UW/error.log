@@ -1,0 +1,6 @@
+2022/08/31 15:09:21 [error] 30585#0: *31 ___获得服务列表_____, client: 127.0.0.1, server: localhost, request: "GET /one HTTP/1.1", host: "localhost"
+2022/08/31 15:09:31 [error] 30585#0: *31 ___获得服务列表_____, client: 127.0.0.1, server: localhost, request: "GET /one HTTP/1.1", host: "localhost"
+2022/08/31 15:09:41 [error] 30585#0: *31 ___获得服务列表_____, client: 127.0.0.1, server: localhost, request: "GET /one HTTP/1.1", host: "localhost"
+2022/08/31 15:09:51 [error] 30585#0: *31 ___获得服务列表_____, client: 127.0.0.1, server: localhost, request: "GET /one HTTP/1.1", host: "localhost"
+2022/08/31 15:10:01 [error] 30585#0: *31 ___获得服务列表_____, client: 127.0.0.1, server: localhost, request: "GET /one HTTP/1.1", host: "localhost"
+2022/08/31 15:10:03 [error] 30585#0: *31 ___获得服务列表_____, client: 127.0.0.1, server: localhost, request: "GET /one HTTP/1.1", host: "localhost"
