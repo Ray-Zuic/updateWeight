@@ -1,14 +1,17 @@
 [
   {
-    "name": "server1",
-    "addr": "49.235.100.85",
+    "name": "server2",
+    "http": "http://",
+    "addr": "127.0.0.1",
     "port": ":8080",
-    "req": "\\one"
+    "req": "/test"
   },
   {
-    "name": "server2",
-    "addr": "192.168.1.26",
+    "name": "server1",
+    "http": "http://",
+    "addr": "49.235.100.85",
     "port": ":8080",
-    "req": "\\one"
+    "req": "/one"
   }
+
 ]

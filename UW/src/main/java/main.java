@@ -8,7 +8,18 @@ import java.util.List;
 public class main {
 
     public static void main(String[] args) throws Exception {
+        //周期更新权重，不更新到nginx
+        //1.每12秒更新一下权重,保存在程序里
+        //2.记录更新时间
 
+        /*周期更新权重，更新到Nginx中
+        1.每8秒检查一次，若是距离上次更新时间小于8秒就更新
+        2.更新时记录时间*/
+
+        //错误日志检查更新
+        //1.每3秒比较日志最新的记录，产生新的记录就更新，更新到Nginx
+        //2.若是更新时间小于12秒就不更新
+        /*即有两个时间，一个是权重队列失效的提醒时间，一个是权重更新程序内的更新记录时间*/
         //ReadConf.upCf();
         //Runtime.getRuntime().exec("sudo nginx");
         //Runtime.getRuntime().exec("cp bb.doc aa");

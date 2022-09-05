@@ -1,2 +1,6 @@
-cg_color=#position1#;
-label_number=#position2#;
+upstream OrdinaryPolling{{
+    idws;
+    server 127.0.0.1      weight=#position1#;
+    server 49.235.100.85  weight=#position2#;
+
+}

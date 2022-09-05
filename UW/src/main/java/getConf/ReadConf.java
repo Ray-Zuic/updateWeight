@@ -2,17 +2,19 @@ package getConf;
 
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang.StringUtils;
+import pojo.ServerWeight;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 
 public class ReadConf {
-    public static int upCf()throws Exception {
+    public static int upCf(List<ServerWeight> serverWeights)throws Exception {
 
         /**
          * 仅供本地测试使用
@@ -20,17 +22,16 @@ public class ReadConf {
         String filePath="su.conf";//目标路径
         String templatePath="su.template";//模板路径
 
+        //根据List内容创建Map
         Map<String,String> updateMap=new HashMap<String,String>();
-        //更新的内容来自网络，需要发送请求获取
+        int i = 1;
         //建议封装在实体类中，用servern，weight来保存
-        updateMap.put("position1","333");//替换内容
-        updateMap.put("position2","444");//替换内容
-//        updateMap.put("position3","444");//替换内容
-//        updateMap.put("position4","444");//替换内容
-//        updateMap.put("position5","444");//替换内容
-//        updateMap.put("position6","444");//替换内容
-//        updateMap.put("position7","444");//替换内容
-//        updateMap.put("position8","444");//替换内容
+        //updateMap.put("position1","333");替换内容
+        for(ServerWeight serverWeight:serverWeights){
+            updateMap.put("position"+i,serverWeight.getWeight());
+            i++;
+        }
+        System.out.println(updateMap);
         try {
             InputStream ins=new FileInputStream(templatePath);
             byte[] bytes= IOUtils.toByteArray(ins);

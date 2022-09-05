@@ -9,6 +9,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Server {
     private String name;
+    private String http;
     private String addr;
     private String port;
     private String req;
